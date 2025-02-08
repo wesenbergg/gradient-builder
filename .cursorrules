@@ -1,0 +1,26 @@
+# Project context
+# TODO
+
+# General coding rules
+- Always prefer simple and readable code over "clever" code.
+- Prefer using constants over "magic" numbers.
+- Prefer dividing code into small functions and methods.
+- Add comments to answer question "why" instead of "what", when writing code that is not obvious or self-explanatory.
+- Avoid commenting obvious and self-explanatory code. Strive to make the code self-explanatory instead.
+- Write code that is easy to write unit tests for.
+- Prefer simple unit tests. If a feature requires a complex unit test, consider refactoring the code to make it simpler to write tests for.
+
+# Language specific coding rules
+# TODO
+
+# General ways of working rules
+- Prefer a TDD (test-driven development) workflow.
+- After making a change, always run the tests to verify that the change works as expected and doesn't break existing functionality.
+- Avoid implementing features that are not required to solve the problem at hand. However, you are free to suggest additional functionality to me and I will consider whether we implement it or not.
+- Solve one problem at a time. Avoid "big bang" changes.
+
+# Version control (Git) rules
+- In the commit message header, always include the reason for the changes, if applicable. E.g. "Add .gitignore to exclude files from version control", instead of just "Add .gitignore".
+- In the commit message body, describe the individual changes in more detail and the reasoning behind them.
+- When writing commit messages, always use the present tense. E.g. "Add .gitignore to exclude files from version control", instead of "Added .gitignore to exclude files from version control".
+- When writing commit messages, keep in mind that the commit message should help someone in the future to understand the choices made and the reasoning behind them.

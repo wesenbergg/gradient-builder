@@ -1,0 +1,34 @@
+version: 2
+updates:
+  # Enable version updates for npm/yarn
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Add labels to pull requests
+    labels:
+      - "dependencies"
+      - "npm"
+    # Set review requirements
+    reviewers:
+      - "owners"
+    # Group all updates together
+    groups:
+      dependencies:
+        patterns:
+          - "*"
+
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    reviewers:
+      - "owners"
+    groups:
+      dependencies:
+        patterns:
+          - "*"
