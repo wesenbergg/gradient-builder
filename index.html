@@ -2,9 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.jpeg" />
+    <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Simple gradient builder for web developers."
+    />
+    <meta
+      name="keywords"
+      content="bg, background, holographic, cozy, gradient, beast, rice, build, css, automation, saas, beautiful, online, web, app, ai, dotcom, stonks, money, cash, rich, poor, broke, wealthy, millionaire, billionaire, trillionaire, zillionaire, gazillionaire, infinityaire, infinity, infinity stones, infinity gauntlet, thanos, iron"
+    />
+    <link rel="manifest" href="manifest.json" />
+
     <title>Gradient Builder</title>
+    <script defer>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js").then(
+            (registration) => {
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            },
+            (err) => {
+              console.log("ServiceWorker registration failed: ", err);
+            }
+          );
+        });
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>
