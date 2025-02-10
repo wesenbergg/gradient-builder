@@ -9,7 +9,7 @@ const aspectRatio = ref("aspect-1-1");
 
 <template>
   <main class="flex items-center space-x-16 justify-center bg-gray-50">
-    <section class="space-y-4">
+    <section class="hidden sm:block space-y-4">
       <div :class="[
         'border-2 border-cyan-950/15 shadow-xl flex flex-col items-center justify-center bg-gray-500 rounded-xl h-[50dvh]',
         'gradient',
@@ -29,8 +29,8 @@ const aspectRatio = ref("aspect-1-1");
         </button>
       </div>
     </section>
-    <section class="min-h-screen space-y-8 pt-32">
-      <div class="flex flex-col justify-center">
+    <section class="flex flex-col justify-center min-h-dvh space-y-8">
+      <div class="max-w-[100vw]">
         <img :src="logo" alt="Logo" class="w-32 h-32 mb-8 rounded-2xl" width="64px" height="64px" />
 
         <h1 class="text-4xl font-bold text-gray-800 mb-8">{{ msg }}</h1>
