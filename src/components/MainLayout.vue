@@ -29,13 +29,13 @@ const aspectRatio = ref("aspect-1-1");
         </button>
       </div>
     </section>
-    <section class="flex flex-col justify-center min-h-dvh space-y-8">
+    <section class="grid content-center min-h-dvh space-y-8 max-sm:pl-4">
       <div class="max-w-[100vw]">
         <img :src="logo" alt="Logo" class="w-32 h-32 mb-8 rounded-2xl" width="64px" height="64px" />
 
         <h1 class="text-4xl font-bold text-gray-800 mb-8">{{ msg }}</h1>
 
-        <div class="flex space-x-4 text-center *:pt-[18px]">
+        <div class="grid grid-cols-5 gap-32 text-center *:pt-[18px] w-full sm:w-md overflow-auto">
           <span class="w-24 h-24 mb-8 rounded-2xl bg-amber-500"></span>
           <span class="w-24 h-24 mb-8 rounded-2xl bg-cyan-900/20 text-cyan-900 text-5xl">+</span>
           <span class="w-24 h-24 mb-8 rounded-2xl bg-cyan-900/20 text-cyan-900 text-5xl">+</span>
