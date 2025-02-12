@@ -36,14 +36,11 @@ const aspectRatio = ref("aspect-1-1");
 
         <div class="grid grid-cols-5 gap-32 text-center *:pt-[18px] w-full sm:w-md overflow-auto">
           <span class="w-24 h-24 mb-8 rounded-2xl bg-amber-500"></span>
-          <span
-            class="w-24 h-24 mb-8 rounded-2xl dark:bg-cyan-50/20 bg-cyan-900/20 dark:text-cyan-50 text-cyan-900 text-5xl">+</span>
-          <span
-            class="w-24 h-24 mb-8 rounded-2xl dark:bg-cyan-50/20 bg-cyan-900/20 dark:text-cyan-50 text-cyan-900 text-5xl">+</span>
-          <span
-            class="w-24 h-24 mb-8 rounded-2xl dark:bg-cyan-50/20 bg-cyan-900/20 dark:text-cyan-50 text-cyan-900 text-5xl">+</span>
-          <span
-            class="w-24 h-24 mb-8 rounded-2xl dark:bg-cyan-50/20 bg-cyan-900/20 dark:text-cyan-50 text-cyan-900 text-5xl">+</span>
+          <!-- <input class="inactive-color-picker after:content-['+'] appearance-none" type="color"> -->
+          <span class="inactive-color-picker">+</span>
+          <span class="inactive-color-picker">+</span>
+          <span class="inactive-color-picker">+</span>
+          <span class="inactive-color-picker">+</span>
         </div>
       </div>
       <div class="flex items-end space-x-4">

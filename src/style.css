@@ -24,3 +24,9 @@
     background-color: #ffffff;
   }
 }
+
+@layer components {
+  .inactive-color-picker {
+    @apply w-24 h-24 mb-8 rounded-2xl dark:bg-cyan-50/20 bg-cyan-900/20 dark:text-cyan-50 text-cyan-900 text-5xl;
+  }
+}
