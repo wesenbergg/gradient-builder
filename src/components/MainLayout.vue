@@ -44,11 +44,9 @@ const aspectRatio = ref("aspect-1-1");
         </div>
       </div>
       <div class="flex items-end space-x-4">
-        <button type="button"
-          class="px-6 py-2 bg-cyan-400/70 text-black font-bold rounded-full hover:bg-cyan-400 transition-colors">
+        <button type="button" class="button">
           Copy CSS</button>
-        <button type="button"
-          class="px-6 py-2 bg-cyan-400/70 text-black font-bold rounded-full hover:bg-cyan-400 transition-colors">
+        <button type="button" class="button">
           Download as Image</button>
       </div>
     </section>
@@ -56,6 +54,13 @@ const aspectRatio = ref("aspect-1-1");
 </template>
 
 <style scoped>
+.unstyled {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
 /* add styles */
 .aspect-1-1 {
   aspect-ratio: 1/1 !important;
