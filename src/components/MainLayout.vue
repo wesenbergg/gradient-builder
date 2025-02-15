@@ -16,8 +16,6 @@ const aspectRatio = ref("aspect-1-1");
         'gradient',
         aspectRatio,
       ]">
-        <!-- Test text -->
-        <!-- <h1 class="text-4xl font-bold text-gray-800 mb-8">{{ msg }}</h1> -->
       </div>
       <div class="space-x-4">
         <button class="border border-cyan-800 px-4 py-2 rounded-md" @click="() => (aspectRatio = 'aspect-1-1')">
@@ -32,15 +30,17 @@ const aspectRatio = ref("aspect-1-1");
       <div class="max-w-[100vw]">
         <img :src="logo" alt="Logo" class="w-32 h-32 mb-8 rounded-2xl" width="64px" height="64px" />
 
-        <h1 class="text-4xl font-bold mb-8">{{ msg }}</h1>
+        <h1 class="text-4xl text-cyan-950 dark:text-cyan-50 font-bold">{{ msg }}</h1>
+        <p class="mb-8 text-cyan-950/80 dark:text-cyan-50/85">Select up to 5 colors.</p>
 
-        <div class="grid grid-cols-5 gap-32 text-center *:pt-[18px] w-full sm:w-md overflow-auto">
-          <span class="w-24 h-24 mb-8 rounded-2xl bg-amber-500"></span>
-          <!-- <input class="inactive-color-picker after:content-['+'] appearance-none" type="color"> -->
-          <span class="inactive-color-picker">+</span>
-          <span class="inactive-color-picker">+</span>
-          <span class="inactive-color-picker">+</span>
-          <span class="inactive-color-picker">+</span>
+        <div class=" w-full sm:w-md relative scroll-container">
+          <div class="grid grid-cols-5 gap-32 text-center *:pt-[18px] overflow-auto">
+            <span class="w-24 h-24 mb-8 rounded-2xl bg-amber-500"></span>
+            <span class="inactive-color-picker">+</span>
+            <span class="inactive-color-picker">+</span>
+            <span class="inactive-color-picker">+</span>
+            <span class="inactive-color-picker">+</span>
+          </div>
         </div>
       </div>
       <div class="flex items-end space-x-4">
@@ -85,5 +85,24 @@ const aspectRatio = ref("aspect-1-1");
       hsl(190deg 74% 91%) 96%,
       hsl(190deg 74% 95%) 99%,
       hsl(0deg 0% 100%) 100%);
+}
+
+.scroll-container {
+  position: relative;
+}
+
+.scroll-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.5rem;
+  height: 100%;
+  background: linear-gradient(to left, var(--color-cyan-50), rgba(255, 255, 255, 0));
+  z-index: 10;
+}
+
+.dark .scroll-container::after {
+  background: linear-gradient(to left, var(--color-cyan-900), rgba(0, 0, 0, 0));
 }
 </style>

@@ -8,7 +8,6 @@
   font-weight: 400;
   font-size: 100%;
 
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
@@ -16,6 +15,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root:not(.dark) {
+  color-scheme: light;
+}
+:root:is(.dark) {
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: light) {
