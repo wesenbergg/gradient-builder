@@ -24,6 +24,10 @@
   color-scheme: dark;
 }
 
+main {
+  @apply transition-all duration-300;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -33,9 +37,12 @@
 
 @layer components {
   .inactive-color-picker {
-    @apply w-24 h-24 mb-8 rounded-2xl dark:bg-cyan-50/20 bg-cyan-900/20 dark:text-cyan-50 text-cyan-900 text-5xl;
+    @apply cursor-pointer w-24 h-24 mb-8 rounded-2xl dark:bg-cyan-50/20 bg-cyan-900/20 dark:text-cyan-50 text-cyan-900 text-5xl active:scale-95 hover:opacity-80 transition-all;
+  }
+  .active-color-picker {
+    @apply w-24 h-24 relative mb-8 rounded-2xl border-2 border-cyan-900/30 shadow;
   }
   .button {
-    @apply px-6 py-2 bg-cyan-400/70 text-black font-bold rounded-full hover:bg-cyan-400 transition-all active:scale-[98%];
+    @apply px-6 py-2 bg-cyan-400/70 text-black font-bold rounded-full hover:bg-cyan-400 transition-all active:scale-95;
   }
 }

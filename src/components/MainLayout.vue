@@ -34,12 +34,12 @@ const aspectRatio = ref("aspect-1-1");
         <p class="mb-8 text-cyan-950/80 dark:text-cyan-50/85">Select up to 5 colors.</p>
 
         <div class=" w-full sm:w-md relative scroll-container">
-          <div class="grid grid-cols-5 gap-32 text-center *:pt-[18px] overflow-auto">
-            <span class="w-24 h-24 mb-8 rounded-2xl bg-amber-500"></span>
-            <span class="inactive-color-picker">+</span>
-            <span class="inactive-color-picker">+</span>
-            <span class="inactive-color-picker">+</span>
-            <span class="inactive-color-picker">+</span>
+          <div class="grid grid-cols-5 gap-32 text-center overflow-auto">
+            <input type="color" name="color1" id="color1" value="#FFCDFD" class="active-color-picker" />
+            <input type="color" name="color2" id="color2" value="#D1F6FF" class="active-color-picker" />
+            <input type="color" name="color3" id="color3" value="#96F8C0" class="active-color-picker" />
+            <button type="button" class="inactive-color-picker">+</button>
+            <button type="button" class="inactive-color-picker">+</button>
           </div>
         </div>
       </div>
@@ -97,12 +97,27 @@ const aspectRatio = ref("aspect-1-1");
   top: 0;
   right: 0;
   width: 1.5rem;
-  height: 100%;
+  height: calc(100% - 1rem);
   background: linear-gradient(to left, var(--color-cyan-50), rgba(255, 255, 255, 0));
   z-index: 10;
 }
 
 .dark .scroll-container::after {
   background: linear-gradient(to left, var(--color-cyan-900), rgba(0, 0, 0, 0));
+}
+
+input[type="color"] {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+/* Hide the default color input */
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
 }
 </style>
